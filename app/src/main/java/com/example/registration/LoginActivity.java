@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.content.Intent;
 
+import com.example.registration.fragment.MainFragmentActivity;
+import com.example.registration.fragment.ProfileFragment;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
@@ -41,7 +43,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         {
             //profile activity here
             finish();
-            startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+            startActivity(new Intent(getApplicationContext(), MainFragmentActivity.class));
         }
 
 
@@ -83,7 +85,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         {
                             //start the profile activity
                             finish();
-                            startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+                            startActivity(new Intent(getApplicationContext(), MainFragmentActivity.class));
                         }
                         progressDialog.dismiss();
 
